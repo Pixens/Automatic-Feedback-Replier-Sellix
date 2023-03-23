@@ -2,4 +2,4 @@
 
 api_key: "" # You sellix API key.
 message: "Thanks for leaving a review nigga, gimme more money." # Message you want to reply with.
-delay: 600                                                      # Delay between checks, in seconds.
+delay: 600 # Delay between checks, in seconds.
