@@ -43,6 +43,6 @@ while True:
     else:
         print(f"{Fore.RED}{Style.BRIGHT}[-] No new reviews found {Fore.RESET}")
         
-        no_reply = []
+    no_reply = []
     
     countdown(config['delay'])
