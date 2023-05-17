@@ -1,5 +1,3 @@
-#This tool does not support multiple shops on the same account so fuck off and don't DM me for fix or any problem you face, I will fucking ignore you.
-
 api_key: "" # You sellix API key.
 message: "Thanks for leaving a review nigga, gimme more money." # Message you want to reply with.
 delay: 600 # Delay between checks, in seconds.
