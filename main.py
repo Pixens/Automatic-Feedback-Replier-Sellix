@@ -14,16 +14,19 @@ if r.status_code == 401:
 
 no_reply = []
 
+def format_time(seconds):
+    hours, remainder = divmod(seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    return '{:02d}:{:02d}:{:02d}'.format(hours, minutes, seconds)
+
 def countdown(t):
-    
     while t:
-        mins, secs = divmod(t, 60)
-        timer = '{:02d}:{:02d}'.format(mins, secs)
-        print(f"{Fore.GREEN}{Style.BRIGHT}[+] {timer}{Fore.RESET}", end="\r")
+        formatted_time = format_time(t)
+        print(f"{Fore.GREEN}{Style.BRIGHT}[+] {formatted_time}{Fore.RESET}", end="\r")
         time.sleep(1)
         t -= 1
-      
-    print(f"{Fore.GREEN}{Style.BRIGHT}[+] Checking for new reviews {Fore.RESET}")
+    
+    #print(f"{Fore.GREEN}{Style.BRIGHT}[+] Checking for new reviews {Fore.RESET}")
 
 while True:
     r = requests.get("https://dev.sellix.io/v1/feedback", headers = {"Authorization": f"Bearer {key}"})
